@@ -67,6 +67,7 @@ const SOURCE_TYPE_FILTER_OPTIONS: {
   { sourceType: ApplicationRegistrationSourceType.TARBALL, label: 'Tarball' },
   { sourceType: ApplicationRegistrationSourceType.OAUTH_ONLY, label: 'OAuth' },
   { sourceType: ApplicationRegistrationSourceType.LOCAL, label: 'Local' },
+  { sourceType: ApplicationRegistrationSourceType.BUILT_IN, label: 'Integrada' },
 ];
 
 export const SettingsAdminApps = () => {
@@ -181,6 +182,9 @@ export const SettingsAdminApps = () => {
       }
       case ApplicationRegistrationSourceType.LOCAL: {
         return 'Local';
+      }
+      case ApplicationRegistrationSourceType.BUILT_IN: {
+        return 'Integrada';
       }
       default:
         return assertUnreachable(registration.sourceType);

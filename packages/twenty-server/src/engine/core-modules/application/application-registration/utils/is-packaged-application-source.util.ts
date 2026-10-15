@@ -4,4 +4,5 @@ export const isPackagedApplicationSource = (
   sourceType: ApplicationRegistrationSourceType,
 ): boolean =>
   sourceType === ApplicationRegistrationSourceType.TARBALL ||
-  sourceType === ApplicationRegistrationSourceType.NPM;
+  sourceType === ApplicationRegistrationSourceType.NPM ||
+  sourceType === ApplicationRegistrationSourceType.BUILT_IN;

@@ -21,6 +21,10 @@ import { readJsonFileOrThrow } from 'src/engine/core-modules/application/applica
 import { resolvePackageContentDir } from 'src/engine/core-modules/application/application-package/utils/tarball-utils';
 import { ApplicationRegistrationEntity } from 'src/engine/core-modules/application/application-registration/application-registration.entity';
 import { ApplicationRegistrationSourceType } from 'src/engine/core-modules/application/application-registration/enums/application-registration-source-type.enum';
+import {
+  getBuiltInAppsPath,
+  isValidBuiltInAppFolderName,
+} from 'src/engine/core-modules/application/built-in-apps/get-built-in-apps-path.util';
 import { ApplicationEntity } from 'src/engine/core-modules/application/application.entity';
 import {
   ApplicationException,
@@ -121,6 +125,8 @@ export class ApplicationPackageFetcherService implements OnModuleInit {
         );
       case ApplicationRegistrationSourceType.TARBALL:
         return this.resolveFromTarball(appRegistration);
+      case ApplicationRegistrationSourceType.BUILT_IN:
+        return this.resolveFromBuiltIn(appRegistration);
       case ApplicationRegistrationSourceType.LOCAL:
       case ApplicationRegistrationSourceType.OAUTH_ONLY:
         return null;
@@ -283,6 +289,59 @@ export class ApplicationPackageFetcherService implements OnModuleInit {
       throw new ApplicationException(
         `Failed to resolve tarball for app ${appRegistration.universalIdentifier}: ${error}`,
         ApplicationExceptionCode.TARBALL_EXTRACTION_FAILED,
+      );
+    }
+  }
+
+  // Copia a pasta da app para uma pasta temporária, porque quem chama apaga
+  // a pasta resolvida no fim da instalação.
+  private async resolveFromBuiltIn(
+    appRegistration: ApplicationRegistrationEntity,
+  ): Promise<ResolvedPackage> {
+    const folderName = appRegistration.sourcePackage;
+
+    if (
+      !isDefined(folderName) ||
+      !isValidBuiltInAppFolderName(folderName)
+    ) {
+      throw new ApplicationException(
+        `App registration ${appRegistration.id} has sourceType=built-in but an invalid folder name`,
+        ApplicationExceptionCode.PACKAGE_RESOLUTION_FAILED,
+      );
+    }
+
+    const workDir = join(APP_FETCHER_TMPDIR, v4());
+
+    try {
+      await fs.cp(join(getBuiltInAppsPath(), folderName), workDir, {
+        recursive: true,
+      });
+
+      const manifest = await readJsonFileOrThrow<Manifest>(
+        workDir,
+        'manifest.json',
+      );
+      const packageJson = await readJsonFileOrThrow<PackageJson>(
+        workDir,
+        'package.json',
+      );
+
+      return {
+        extractedDir: workDir,
+        cleanupDir: workDir,
+        manifest,
+        packageJson,
+      };
+    } catch (error) {
+      await this.cleanupExtractedDir(workDir);
+
+      if (error instanceof ApplicationException) {
+        throw error;
+      }
+
+      throw new ApplicationException(
+        `Failed to resolve built-in app ${appRegistration.universalIdentifier}: ${error}`,
+        ApplicationExceptionCode.PACKAGE_RESOLUTION_FAILED,
       );
     }
   }

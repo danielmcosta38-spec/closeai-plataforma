@@ -28,6 +28,12 @@ setup_and_migrate_db() {
         echo "Warning: Failed to flush cache after upgrade, but continuing startup..."
     fi
 
+    # CloseAI: regista e instala em todas as organizações as apps que vêm
+    # dentro da imagem (built-in-apps/).
+    if ! yarn command:prod closeai:sync-built-in-apps; then
+        echo "Warning: Failed to sync built-in apps, but continuing startup..."
+    fi
+
     echo "Successfully migrated DB!"
 }
 

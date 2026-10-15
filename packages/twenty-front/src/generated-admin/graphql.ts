@@ -341,6 +341,7 @@ export type ApplicationRegistrationInstalledWorkspaces = {
 };
 
 export enum ApplicationRegistrationSourceType {
+  BUILT_IN = 'BUILT_IN',
   LOCAL = 'LOCAL',
   NPM = 'NPM',
   OAUTH_ONLY = 'OAUTH_ONLY',

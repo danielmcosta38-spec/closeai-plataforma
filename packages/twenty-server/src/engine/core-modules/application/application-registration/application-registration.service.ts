@@ -889,6 +889,97 @@ export class ApplicationRegistrationService {
     });
   }
 
+  // CloseAI: regista ou atualiza uma app que vem dentro da imagem. Fica
+  // pré-instalada (o servidor instala-a em todas as organizações), fora do
+  // marketplace e sem dono. Uma versão nova atualiza todas as organizações,
+  // não só as que pediram atualização automática.
+  async upsertBuiltIn(params: {
+    folderName: string;
+    manifest: Manifest;
+    version: string | null;
+  }): Promise<ApplicationRegistrationEntity | null> {
+    const universalIdentifier =
+      params.manifest.application.universalIdentifier.toLowerCase();
+    const name = params.manifest.application.displayName ?? params.folderName;
+
+    const existing =
+      await this.findOneByUniversalIdentifierGlobal(universalIdentifier);
+
+    if (
+      isDefined(existing) &&
+      existing.sourceType !== ApplicationRegistrationSourceType.BUILT_IN
+    ) {
+      this.logger.warn(
+        `Skipping built-in app ${params.folderName}: universal identifier ${universalIdentifier} is registered from source ${existing.sourceType}`,
+      );
+
+      return null;
+    }
+
+    if (!isDefined(existing)) {
+      const registration = this.applicationRegistrationRepository.create({
+        universalIdentifier,
+        name,
+        sourceType: ApplicationRegistrationSourceType.BUILT_IN,
+        sourcePackage: params.folderName,
+        latestAvailableVersion: params.version,
+        isListed: false,
+        isVetted: true,
+        isPreInstalled: true,
+        manifest: params.manifest,
+        ...fromManifestApplicationToDisplayFields(params.manifest.application),
+        oAuthClientId: v4(),
+        oAuthRedirectUris: [],
+        oAuthScopes: [],
+        ownerWorkspaceId: null,
+      });
+
+      await this.applicationRegistrationRepository.save(registration);
+
+      if (isDefined(params.manifest.application.serverVariables)) {
+        await this.applicationRegistrationVariableService.syncVariableSchemas(
+          registration.id,
+          params.manifest.application.serverVariables,
+        );
+      }
+
+      return registration;
+    }
+
+    const manifestUpdate = await this.updateFromManifest({
+      applicationRegistrationId: existing.id,
+      manifest: params.manifest,
+      sourceType: ApplicationRegistrationSourceType.BUILT_IN,
+      latestAvailableVersion: params.version,
+      registrationBeforeUpdate: existing,
+      additionalFields: { name, sourcePackage: params.folderName },
+    });
+
+    if (!existing.isPreInstalled) {
+      await this.applicationRegistrationRepository.update(existing.id, {
+        isPreInstalled: true,
+      });
+    }
+
+    if (manifestUpdate?.isNewerVersion === true) {
+      try {
+        await this.applicationUpgradeQueueService.add<UpgradeApplicationsJobData>(
+          UPGRADE_APPLICATIONS_JOB_NAME,
+          { applicationRegistrationId: existing.id, onlyAutoUpgrade: false },
+        );
+      } catch (error) {
+        this.logger.error(
+          `Failed to enqueue upgrade for built-in app ${universalIdentifier}`,
+          error,
+        );
+      }
+    }
+
+    return this.applicationRegistrationRepository.findOneOrFail({
+      where: { id: existing.id },
+    });
+  }
+
   private async updateFromCatalog(
     existing: ApplicationRegistrationEntity,
     params: UpsertApplicationRegistrationFromCatalogParams,

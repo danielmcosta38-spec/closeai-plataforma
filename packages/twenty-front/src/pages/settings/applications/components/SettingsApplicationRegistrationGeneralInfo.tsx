@@ -167,6 +167,13 @@ export const SettingsApplicationRegistrationGeneralInfo = ({
           value: 'OAuth',
         });
         break;
+      case ApplicationRegistrationSourceType.BUILT_IN:
+        items.push({
+          Icon: IconBox,
+          label: t`Source`,
+          value: 'Integrada',
+        });
+        break;
     }
 
     if (isNonEmptyString(registration.latestAvailableVersion)) {

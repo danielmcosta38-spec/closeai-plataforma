@@ -31,6 +31,7 @@ const SOURCE_TYPE_LABELS: Record<ApplicationRegistrationSourceType, string> = {
   [ApplicationRegistrationSourceType.NPM]: 'NPM',
   [ApplicationRegistrationSourceType.OAUTH_ONLY]: 'OAuth',
   [ApplicationRegistrationSourceType.TARBALL]: 'Tarball',
+  [ApplicationRegistrationSourceType.BUILT_IN]: 'Integrada',
 };
 
 export const SettingsApplicationTableRow = ({
