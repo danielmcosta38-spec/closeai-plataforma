@@ -26,6 +26,6 @@ jobs:
       - name: Compilar (estágio de produção do Dockerfile)
         run: |
           docker build -f packages/twenty-docker/twenty/Dockerfile --target twenty \
-            --build-arg APP_VERSION="closeai-$VERSAO" \
+            --build-arg APP_VERSION="2.43.0" \
             -t "$IMAGEM:$VERSAO" -t "$IMAGEM:main" .
       - run: docker push "$IMAGEM:$VERSAO" && docker push "$IMAGEM:main"
