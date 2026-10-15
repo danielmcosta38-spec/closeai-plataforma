@@ -1,3 +1,4 @@
+import { SEM_CODIGO_DE_UTILIZADOR } from 'src/engine/core-modules/closeai/codigo-de-utilizador.constant';
 import { Injectable } from '@nestjs/common';
 
 import { type WorkflowAction } from 'src/modules/workflow/workflow-executor/interfaces/workflow-action.interface';
@@ -56,7 +57,7 @@ export class WorkflowActionFactory {
   get(stepType: WorkflowActionType): WorkflowAction {
     switch (stepType) {
       case WorkflowActionType.CODE:
-        return this.codeWorkflowAction;
+        throw new Error(SEM_CODIGO_DE_UTILIZADOR);
       case WorkflowActionType.LOGIC_FUNCTION:
         return this.logicFunctionWorkflowAction;
       case WorkflowActionType.SEND_EMAIL:

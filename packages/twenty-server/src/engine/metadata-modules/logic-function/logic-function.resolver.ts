@@ -1,3 +1,4 @@
+import { SEM_CODIGO_DE_UTILIZADOR } from 'src/engine/core-modules/closeai/codigo-de-utilizador.constant';
 import { UseFilters, UseGuards, UsePipes } from '@nestjs/common';
 import { Args, Mutation, Query, Subscription } from '@nestjs/graphql';
 
@@ -187,14 +188,8 @@ export class LogicFunctionResolver {
     @Args('input') input: CreateLogicFunctionFromSourceInput,
     @AuthWorkspace() { id: workspaceId }: WorkspaceEntity,
   ): Promise<LogicFunctionDTO> {
-    try {
-      return await this.logicFunctionFromSourceService.createOneFromSource({
-        input,
-        workspaceId,
-      });
-    } catch (error) {
-      return logicFunctionGraphQLApiExceptionHandler(error);
-    }
+    // CloseAI: ver codigo-de-utilizador.constant.ts.
+    throw new ForbiddenError(SEM_CODIGO_DE_UTILIZADOR);
   }
 
   @Mutation(() => LogicFunctionExecutionResultDTO)
@@ -210,17 +205,8 @@ export class LogicFunctionResolver {
     @AuthUser() { id: userId }: AuthContextUser,
     @AuthUserWorkspaceId() userWorkspaceId: string,
   ): Promise<LogicFunctionExecutionResultDTO> {
-    try {
-      return await this.logicFunctionFromSourceService.executeOneFromSource({
-        id,
-        payload,
-        workspaceId,
-        userId,
-        userWorkspaceId,
-      });
-    } catch (error) {
-      return logicFunctionGraphQLApiExceptionHandler(error);
-    }
+    // CloseAI: ver codigo-de-utilizador.constant.ts.
+    throw new ForbiddenError(SEM_CODIGO_DE_UTILIZADOR);
   }
 
   @Query(() => String, { nullable: true })
@@ -255,16 +241,8 @@ export class LogicFunctionResolver {
     updateLogicFunctionFromSourceInput: UpdateLogicFunctionFromSourceInput,
     @AuthWorkspace() { id: workspaceId }: WorkspaceEntity,
   ): Promise<boolean> {
-    try {
-      await this.logicFunctionFromSourceService.updateOneFromSource({
-        updateLogicFunctionFromSourceInput,
-        workspaceId,
-      });
-
-      return true;
-    } catch (error) {
-      return logicFunctionGraphQLApiExceptionHandler(error);
-    }
+    // CloseAI: ver codigo-de-utilizador.constant.ts.
+    throw new ForbiddenError(SEM_CODIGO_DE_UTILIZADOR);
   }
 
   @Subscription(() => LogicFunctionLogsDTO, {
