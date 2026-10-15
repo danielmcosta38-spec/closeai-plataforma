@@ -1,4 +1,5 @@
 import { SEM_CODIGO_DE_UTILIZADOR } from 'src/engine/core-modules/closeai/codigo-de-utilizador.constant';
+import { ForbiddenError } from 'src/engine/core-modules/graphql/utils/graphql-errors.util';
 import { UseFilters, UseGuards, UsePipes } from '@nestjs/common';
 import { Args, Mutation, Query, Subscription } from '@nestjs/graphql';
 
