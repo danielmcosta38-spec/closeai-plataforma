@@ -167,7 +167,7 @@ export const responseData = {
         customDomain: null,
         workspaceUrls: {
           customUrl: undefined,
-          subdomainUrl: 'https://test.twenty.com/',
+          subdomainUrl: 'https://app.closeai.pt',
         },
         featureFlags: [],
         metadataVersion: 1,

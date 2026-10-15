@@ -13,595 +13,591 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:75
+#. js-lingui-explicit-id
 msgid "Meeting options"
 msgstr "Meeting options"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:101
+#. js-lingui-explicit-id
 msgid "Restore auto-join"
 msgstr "Restore auto-join"
 
-#. js-lingui-explicit-id
 #: src/renderer/notice-message.ts:9
+#. js-lingui-explicit-id
 msgid "Opening {title}. Complete any meeting provider confirmation to enter."
 msgstr "Opening {title}. Complete any meeting provider confirmation to enter."
 
-#. js-lingui-explicit-id
 #: src/renderer/notice-message.ts:14
-msgid "Recording ended. Twenty is processing your conversation."
-msgstr "Recording ended. Twenty is processing your conversation."
-
 #. js-lingui-explicit-id
+msgid "Recording ended. Twenty is processing your conversation."
+msgstr "Recording ended. CloseAI is processing your conversation."
+
 #: src/renderer/notice-message.ts:16
+#. js-lingui-explicit-id
 msgid "Network connection lost. Stopping this recording. Reconnect before starting a new recording."
 msgstr "Network connection lost. Stopping this recording. Reconnect before starting a new recording."
 
-#. js-lingui-explicit-id
 #: src/renderer/notice-message.ts:20
+#. js-lingui-explicit-id
 msgid "Connection restored. Finish the interrupted recording before starting another."
 msgstr "Connection restored. Finish the interrupted recording before starting another."
 
-#. js-lingui-explicit-id
 #: src/renderer/notice-message.ts:24
+#. js-lingui-explicit-id
 msgid "Connection restored. Start a new recording to continue capturing."
 msgstr "Connection restored. Start a new recording to continue capturing."
 
-#. js-lingui-explicit-id
 #: src/renderer/notice-message.ts:28
+#. js-lingui-explicit-id
 msgid "Audio capture was interrupted. Check your microphone and speaker settings."
 msgstr "Audio capture was interrupted. Check your microphone and speaker settings."
 
-#. js-lingui-explicit-id
 #: src/renderer/notice-message.ts:32
+#. js-lingui-explicit-id
 msgid "Recording stopped after the connection was lost. Reconnect to check its processing status."
 msgstr "Recording stopped after the connection was lost. Reconnect to check its processing status."
 
-#. js-lingui-explicit-id
 #: src/renderer/format.ts:13
-msgid "Saved to Twenty"
-msgstr "Saved to Twenty"
-
 #. js-lingui-explicit-id
+msgid "Saved to Twenty"
+msgstr "Saved to CloseAI"
+
 #: src/renderer/format.ts:14
+#. js-lingui-explicit-id
 msgid "Processing"
 msgstr "Processing"
 
-#. js-lingui-explicit-id
 #: src/renderer/format.ts:15
+#. js-lingui-explicit-id
 msgid "Recording failed"
 msgstr "Recording failed"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:145
 #: src/renderer/format.ts:16
+#. js-lingui-explicit-id
 msgid "Recording"
 msgstr "Recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/format.ts:17
 #: src/renderer/format.ts:18
+#. js-lingui-explicit-id
 msgid "Preparing"
 msgstr "Preparing"
 
-#. js-lingui-explicit-id
 #: src/renderer/useCompanion.ts:59
-msgid "Could not connect to the app. Reopen Twenty."
-msgstr "Could not connect to the app. Reopen Twenty."
-
 #. js-lingui-explicit-id
+msgid "Could not connect to the app. Reopen Twenty."
+msgstr "Could not connect to the app. Reopen CloseAI."
+
 #: src/renderer/useCompanion.ts:89
+#. js-lingui-explicit-id
 msgid "The app could not complete this action. Please try again."
 msgstr "The app could not complete this action. Please try again."
 
-#. js-lingui-explicit-id
 #: src/renderer/ShortcutSetting.tsx:16
+#. js-lingui-explicit-id
 msgid "Open companion shortcut"
 msgstr "Open companion shortcut"
 
-#. js-lingui-explicit-id
 #: src/renderer/ShortcutSetting.tsx:19
+#. js-lingui-explicit-id
 msgid "Press Control, Option / Alt, or Command with a key. Escape cancels."
 msgstr "Press Control, Option / Alt, or Command with a key. Escape cancels."
 
-#. js-lingui-explicit-id
 #: src/renderer/ShortcutSetting.tsx:22
-msgid "Open Twenty from anywhere on your computer."
-msgstr "Open Twenty from anywhere on your computer."
-
 #. js-lingui-explicit-id
+msgid "Open Twenty from anywhere on your computer."
+msgstr "Open CloseAI from anywhere on your computer."
+
 #: src/renderer/ShortcutSetting.tsx:29
+#. js-lingui-explicit-id
 msgid "Reset shortcut"
 msgstr "Reset shortcut"
 
-#. js-lingui-explicit-id
 #: src/renderer/ShortcutSetting.tsx:61
+#. js-lingui-explicit-id
 msgid "Change open companion shortcut"
 msgstr "Change open companion shortcut"
 
-#. js-lingui-explicit-id
 #: src/renderer/ShortcutSetting.tsx:68
+#. js-lingui-explicit-id
 msgid "Press shortcut…"
 msgstr "Press shortcut…"
 
-#. js-lingui-explicit-id
 #: src/renderer/Recordings.tsx:32
-msgid "Open in Twenty"
-msgstr "Open in Twenty"
-
 #. js-lingui-explicit-id
+msgid "Open in Twenty"
+msgstr "Open in CloseAI"
+
 #: src/renderer/Recordings.tsx:47
+#. js-lingui-explicit-id
 msgid "Unknown participant"
 msgstr "Unknown participant"
 
-#. js-lingui-explicit-id
 #: src/renderer/Recordings.tsx:56
+#. js-lingui-explicit-id
 msgid "Recent conversation"
 msgstr "Recent conversation"
 
-#. js-lingui-explicit-id
 #: src/renderer/Recordings.tsx:71
+#. js-lingui-explicit-id
 msgid "No matching recordings"
 msgstr "No matching recordings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Recordings.tsx:72
+#. js-lingui-explicit-id
 msgid "A place for every conversation"
 msgstr "A place for every conversation"
 
-#. js-lingui-explicit-id
 #: src/renderer/Recordings.tsx:77
+#. js-lingui-explicit-id
 msgid "Try another meeting title."
 msgstr "Try another meeting title."
 
-#. js-lingui-explicit-id
 #: src/renderer/Recordings.tsx:78
-msgid "Your recorded conversations will appear here and in your Twenty workspace."
-msgstr "Your recorded conversations will appear here and in your Twenty workspace."
-
 #. js-lingui-explicit-id
+msgid "Your recorded conversations will appear here and in your Twenty workspace."
+msgstr "Your recorded conversations will appear here and in your CloseAI workspace."
+
 #: src/renderer/components.tsx:64
 #: src/renderer/components.tsx:88
+#. js-lingui-explicit-id
 msgid "Dismiss message"
 msgstr "Dismiss message"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:77
+#. js-lingui-explicit-id
 msgid "Install Desktop Recorder"
 msgstr "Install Desktop Recorder"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:144
+#. js-lingui-explicit-id
 msgid "Starting recording…"
 msgstr "Starting recording…"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:146
+#. js-lingui-explicit-id
 msgid "Pausing…"
 msgstr "Pausing…"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:147
+#. js-lingui-explicit-id
 msgid "Recording paused"
 msgstr "Recording paused"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:148
+#. js-lingui-explicit-id
 msgid "Resuming…"
 msgstr "Resuming…"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:149
+#. js-lingui-explicit-id
 msgid "Finishing recording…"
 msgstr "Finishing recording…"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:154
+#. js-lingui-explicit-id
 msgid "Current recording"
 msgstr "Current recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:184
+#. js-lingui-explicit-id
 msgid "Resume"
 msgstr "Resume"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:184
+#. js-lingui-explicit-id
 msgid "Pause"
 msgstr "Pause"
 
-#. js-lingui-explicit-id
 #: src/renderer/components.tsx:195
+#. js-lingui-explicit-id
 msgid "Finish recording"
 msgstr "Finish recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:44
 #: src/renderer/MeetingRow.tsx:58
+#. js-lingui-explicit-id
 msgid "Auto-join skipped"
 msgstr "Auto-join skipped"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:46
+#. js-lingui-explicit-id
 msgid "Calendar bot recording"
 msgstr "Calendar bot recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:48
+#. js-lingui-explicit-id
 msgid "Desktop recording available"
 msgstr "Desktop recording available"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:49
+#. js-lingui-explicit-id
 msgid "Recording is off"
 msgstr "Recording is off"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:60
+#. js-lingui-explicit-id
 msgid "Calendar bot"
 msgstr "Calendar bot"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:61
+#. js-lingui-explicit-id
 msgid "Recording off"
 msgstr "Recording off"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:102
+#. js-lingui-explicit-id
 msgid "Skip auto-join"
 msgstr "Skip auto-join"
 
-#. js-lingui-explicit-id
 #: src/renderer/MeetingRow.tsx:122
+#. js-lingui-explicit-id
 msgid "Join"
 msgstr "Join"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:24
+#. js-lingui-explicit-id
 msgid "Record your voice"
 msgstr "Record your voice"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:25
+#. js-lingui-explicit-id
 msgid "Enable microphone"
 msgstr "Enable microphone"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:30
+#. js-lingui-explicit-id
 msgid "Record call audio"
 msgstr "Record call audio"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:31
+#. js-lingui-explicit-id
 msgid "Enable system audio"
 msgstr "Enable system audio"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:36
+#. js-lingui-explicit-id
 msgid "Detect calls and speakers"
 msgstr "Detect calls and speakers"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:37
+#. js-lingui-explicit-id
 msgid "Enable accessibility"
 msgstr "Enable accessibility"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:57
 #: src/renderer/Settings.tsx:166
+#. js-lingui-explicit-id
 msgid "Enabled"
 msgstr "Enabled"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:73
 #: src/renderer/Settings.tsx:188
+#. js-lingui-explicit-id
 msgid "Open settings"
 msgstr "Open settings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:96
+#. js-lingui-explicit-id
 msgid "Set up recording"
 msgstr "Set up recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:97
-msgid "Enable audio access to transcribe your conversations and save them in Twenty."
-msgstr "Enable audio access to transcribe your conversations and save them in Twenty."
-
 #. js-lingui-explicit-id
+msgid "Enable audio access to transcribe your conversations and save them in Twenty."
+msgstr "Enable audio access to transcribe your conversations and save them in CloseAI."
+
 #: src/renderer/Permissions.tsx:119
+#. js-lingui-explicit-id
 msgid "Start recording"
 msgstr "Start recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/Permissions.tsx:119
+#. js-lingui-explicit-id
 msgid "Finish"
 msgstr "Finish"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:90
+#. js-lingui-explicit-id
 msgid "Show less"
 msgstr "Show less"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:90
+#. js-lingui-explicit-id
 msgid "See more"
 msgstr "See more"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:105
+#. js-lingui-explicit-id
 msgid "Your calendar is clear"
 msgstr "Your calendar is clear"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:106
+#. js-lingui-explicit-id
 msgid "Bring your calendar along"
 msgstr "Bring your calendar along"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:110
+#. js-lingui-explicit-id
 msgid "Start a recording for an unscheduled conversation."
 msgstr "Start a recording for an unscheduled conversation."
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:111
-msgid "Connect a calendar in Twenty to see your upcoming meetings."
-msgstr "Connect a calendar in Twenty to see your upcoming meetings."
-
 #. js-lingui-explicit-id
+msgid "Connect a calendar in Twenty to see your upcoming meetings."
+msgstr "Connect a calendar in CloseAI to see your upcoming meetings."
+
 #: src/renderer/Home.tsx:121
+#. js-lingui-explicit-id
 msgid "Connect calendar"
 msgstr "Connect calendar"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:139
 #: src/renderer/Home.tsx:142
+#. js-lingui-explicit-id
 msgid "Recordings"
 msgstr "Recordings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:146
+#. js-lingui-explicit-id
 msgid "Search recordings"
 msgstr "Search recordings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Home.tsx:147
+#. js-lingui-explicit-id
 msgid "Search recordings…"
 msgstr "Search recordings…"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:65
+#. js-lingui-explicit-id
 msgid "General"
 msgstr "General"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:73
 #: src/renderer/Settings.tsx:78
+#. js-lingui-explicit-id
 msgid "Appearance"
 msgstr "Appearance"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:74
-msgid "Choose how Twenty looks on this computer."
-msgstr "Choose how Twenty looks on this computer."
-
 #. js-lingui-explicit-id
+msgid "Choose how Twenty looks on this computer."
+msgstr "Choose how CloseAI looks on this computer."
+
 #: src/renderer/Settings.tsx:82
+#. js-lingui-explicit-id
 msgid "System"
 msgstr "System"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:83
+#. js-lingui-explicit-id
 msgid "Light"
 msgstr "Light"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:84
+#. js-lingui-explicit-id
 msgid "Dark"
 msgstr "Dark"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:98
+#. js-lingui-explicit-id
 msgid "Launch at login"
 msgstr "Launch at login"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:99
-msgid "Keep Twenty ready in the background when you sign in."
-msgstr "Keep Twenty ready in the background when you sign in."
-
 #. js-lingui-explicit-id
+msgid "Keep Twenty ready in the background when you sign in."
+msgstr "Keep CloseAI ready in the background when you sign in."
+
 #: src/renderer/Settings.tsx:109
+#. js-lingui-explicit-id
 msgid "Meeting countdown"
 msgstr "Meeting countdown"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:110
+#. js-lingui-explicit-id
 msgid "Show time until your next meeting beside the tray icon."
 msgstr "Show time until your next meeting beside the tray icon."
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:115
+#. js-lingui-explicit-id
 msgid "Meetings"
 msgstr "Meetings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:125
+#. js-lingui-explicit-id
 msgid "Auto-join meetings"
 msgstr "Auto-join meetings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:126
+#. js-lingui-explicit-id
 msgid "Open the meeting link when your calendar event starts."
 msgstr "Open the meeting link when your calendar event starts."
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:133
+#. js-lingui-explicit-id
 msgid "Record unscheduled calls automatically"
 msgstr "Record unscheduled calls automatically"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:134
+#. js-lingui-explicit-id
 msgid "Start recording detected calls outside your calendar."
 msgstr "Start recording detected calls outside your calendar."
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:141
+#. js-lingui-explicit-id
 msgid "Call detection notifications"
 msgstr "Call detection notifications"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:142
+#. js-lingui-explicit-id
 msgid "Notify you when a call is detected and needs manual recording."
 msgstr "Notify you when a call is detected and needs manual recording."
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:161
+#. js-lingui-explicit-id
 msgid "Speaker tags"
 msgstr "Speaker tags"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:162
+#. js-lingui-explicit-id
 msgid "Identify who is speaking in supported calls."
 msgstr "Identify who is speaking in supported calls."
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:189
+#. js-lingui-explicit-id
 msgid "Enable"
 msgstr "Enable"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:203
+#. js-lingui-explicit-id
 msgid "Recording permissions"
 msgstr "Recording permissions"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:204
+#. js-lingui-explicit-id
 msgid "Manage microphone, system audio, and call detection access."
 msgstr "Manage microphone, system audio, and call detection access."
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:212
+#. js-lingui-explicit-id
 msgid "Workspace"
 msgstr "Workspace"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:226
+#. js-lingui-explicit-id
 msgid "Calendar settings"
 msgstr "Calendar settings"
 
-#. js-lingui-explicit-id
 #: src/renderer/Settings.tsx:227
-msgid "Manage your connected calendars in Twenty."
-msgstr "Manage your connected calendars in Twenty."
-
 #. js-lingui-explicit-id
+msgid "Manage your connected calendars in Twenty."
+msgstr "Manage your connected calendars in CloseAI."
+
 #: src/renderer/Settings.tsx:242
+#. js-lingui-explicit-id
 msgid "Disconnect"
 msgstr "Disconnect"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:17
+#. js-lingui-explicit-id
 msgid "Connect your workspace"
 msgstr "Connect your workspace"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:18
+#. js-lingui-explicit-id
 msgid "Enter your workspace URL to sign in through your browser."
 msgstr "Enter your workspace URL to sign in through your browser."
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:29
 #: src/renderer/Onboarding.tsx:32
+#. js-lingui-explicit-id
 msgid "Workspace URL"
 msgstr "Workspace URL"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:55
+#. js-lingui-explicit-id
 msgid "Waiting for your browser…"
 msgstr "Waiting for your browser…"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:56
+#. js-lingui-explicit-id
 msgid "Connect to Twenty"
-msgstr "Connect to Twenty"
+msgstr "Connect to CloseAI"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:64
-msgid "Set up Desktop Recorder in Twenty"
-msgstr "Set up Desktop Recorder in Twenty"
-
 #. js-lingui-explicit-id
+msgid "Set up Desktop Recorder in Twenty"
+msgstr "Set up Desktop Recorder in CloseAI"
+
 #: src/renderer/Onboarding.tsx:75
+#. js-lingui-explicit-id
 msgid "You are ready"
 msgstr "You are ready"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:76
+#. js-lingui-explicit-id
 msgid "for your next conversation"
 msgstr "for your next conversation"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:83
+#. js-lingui-explicit-id
 msgid "Open my workspace"
 msgstr "Open my workspace"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:118
+#. js-lingui-explicit-id
 msgid "Your workspace needs attention"
 msgstr "Your workspace needs attention"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:119
+#. js-lingui-explicit-id
 msgid "Connecting your workspace"
 msgstr "Connecting your workspace"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:127
+#. js-lingui-explicit-id
 msgid "Try again"
 msgstr "Try again"
 
-#. js-lingui-explicit-id
 #: src/renderer/Onboarding.tsx:132
+#. js-lingui-explicit-id
 msgid "Your calendar and recording integration need to finish loading before setup can continue."
 msgstr "Your calendar and recording integration need to finish loading before setup can continue."
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:41
+#. js-lingui-explicit-id
 msgid "Navigation modes"
 msgstr "Navigation modes"
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:47
+#. js-lingui-explicit-id
 msgid "Home"
 msgstr "Home"
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:53
+#. js-lingui-explicit-id
 msgid "Settings"
 msgstr "Settings"
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:74
+#. js-lingui-explicit-id
 msgid "New recording"
 msgstr "New recording"
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:81
+#. js-lingui-explicit-id
 msgid "Interactive preview · sample data · no audio is captured"
 msgstr "Interactive preview · sample data · no audio is captured"
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:93
+#. js-lingui-explicit-id
 msgid "Opening your workspace"
 msgstr "Opening your workspace"
 
-#. js-lingui-explicit-id
 #: src/renderer/CompanionApp.tsx:95
+#. js-lingui-explicit-id
 msgid "Loading your calendar and conversations…"
 msgstr "Loading your calendar and conversations…"
-
-#. js-lingui-explicit-id
-#: src/renderer/Home.tsx:43
-#: src/renderer/Home.tsx:44

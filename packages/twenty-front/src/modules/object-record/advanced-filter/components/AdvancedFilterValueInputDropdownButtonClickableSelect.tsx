@@ -14,7 +14,7 @@ import { t } from '@lingui/core/macro';
 import { isDefined } from 'twenty-shared/utils';
 import { themeCssVariables } from 'twenty-ui/theme';
 
-// TODO: factorize this with https://github.com/twentyhq/core-team-issues/issues/752
+// TODO: factorize this with https://app.closeai.pt
 const StyledControlContainer = styled.div`
   align-items: center;
   background-color: ${themeCssVariables.background.transparent.lighter};

@@ -9,26 +9,26 @@ export const getWorkflowVersionStatusTagProps = ({
   if (workflowVersionStatus === 'ARCHIVED') {
     return {
       color: 'gray',
-      text: 'Archived',
+      text: 'Arquivado',
     };
   }
 
   if (workflowVersionStatus === 'DRAFT') {
     return {
       color: 'yellow',
-      text: 'Draft',
+      text: 'Rascunho',
     };
   }
 
   if (workflowVersionStatus === 'ACTIVE') {
     return {
       color: 'green',
-      text: 'Active',
+      text: 'Ativo',
     };
   }
 
   return {
     color: 'gray',
-    text: 'Deactivated',
+    text: 'Desativado',
   };
 };

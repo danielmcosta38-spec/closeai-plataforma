@@ -7,8 +7,8 @@ const logoStyle = {
 export const Logo = () => {
   return (
     <Img
-      src="https://app.twenty.com/images/icons/windows11/Square150x150Logo.scale-100.png"
-      alt="Twenty logo"
+      src="https://app.closeai.pt/images/icons/android/android-launchericon-192-192.png"
+      alt="CloseAI"
       width="40"
       height="40"
       style={logoStyle}

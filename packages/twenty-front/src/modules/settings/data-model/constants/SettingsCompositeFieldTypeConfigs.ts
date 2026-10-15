@@ -28,7 +28,7 @@ import {
 } from 'twenty-ui/icon';
 import { FieldMetadataType } from '~/generated-metadata/graphql';
 
-//TODO : isIncludedInUniqueConstraint refactor - https://github.com/twentyhq/core-team-issues/issues/1097
+//TODO : isIncludedInUniqueConstraint refactor - https://app.closeai.pt
 
 export type CompositeSubFieldConfig<T> = {
   subFieldName: keyof T;
@@ -181,11 +181,11 @@ export const SETTINGS_COMPOSITE_FIELD_TYPE_CONFIGS = {
       {
         primaryLinkUrl: 'twenty.com',
         primaryLinkLabel: '',
-        secondaryLinks: [{ url: 'twenty.com', label: 'Twenty' }],
+        secondaryLinks: [{ url: 'twenty.com', label: 'CloseAI' }],
       },
       {
         primaryLinkUrl: 'github.com/twentyhq/twenty',
-        primaryLinkLabel: 'Twenty Repo',
+        primaryLinkLabel: 'CloseAI Repo',
         secondaryLinks: [{ url: 'twenty.com', label: '' }],
       },
       {

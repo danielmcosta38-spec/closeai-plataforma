@@ -62,7 +62,7 @@ export const SettingsCommunity = () => {
       cardTitle: t`Join our Discord`,
     },
     {
-      href: 'https://x.com/twentycrm',
+      href: 'https://app.closeai.pt',
       Icon: IconBrandX,
       iconColor: themeCssVariables.font.color.primary,
       cardTitle: t`Follow us on X`,
@@ -124,7 +124,7 @@ export const SettingsCommunity = () => {
             description={t`Hire a partner to help you implement and customize Twenty.`}
           />
           <StyledCardLink
-            href="https://twenty.com/partners/list"
+            href="https://app.closeai.pt"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -148,7 +148,7 @@ export const SettingsCommunity = () => {
           <StyledFeaturesContent>
             <SettingsLabContent />
             <StyledCardLink
-              href="https://twenty.com/releases"
+              href="https://app.closeai.pt"
               target="_blank"
               rel="noopener noreferrer"
             >
