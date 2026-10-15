@@ -1,0 +1,31 @@
+name: imagem
+# A imagem do CloseAI compila-se aqui, e nunca no servidor: a compilação usa
+# mais de 8 GB de RAM e o servidor de produção corre outros serviços.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  packages: write
+jobs:
+  construir:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Libertar disco (a compilação passa dos 14 GB)
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+      - uses: docker/login-action@v3
+        with: { registry: ghcr.io, username: "${{ github.actor }}", password: "${{ secrets.GITHUB_TOKEN }}" }
+      - name: Etiquetas
+        run: |
+          DONO="$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')"
+          echo "IMAGEM=ghcr.io/$DONO/closeai-plataforma" >> "$GITHUB_ENV"
+          echo "VERSAO=$(git rev-parse --short=8 HEAD)" >> "$GITHUB_ENV"
+      - name: Compilar (estágio de produção do Dockerfile)
+        run: |
+          docker build -f packages/twenty-docker/twenty/Dockerfile --target twenty \
+            --build-arg APP_VERSION="closeai-$VERSAO" \
+            -t "$IMAGEM:$VERSAO" -t "$IMAGEM:main" .
+      - run: docker push "$IMAGEM:$VERSAO" && docker push "$IMAGEM:main"
