@@ -21,7 +21,7 @@ jobs:
       - name: Etiquetas
         run: |
           DONO="$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')"
-          echo "IMAGEM=ghcr.io/$DONO/closeai-plataforma" >> "$GITHUB_ENV"
+          echo "IMAGEM=ghcr.io/$DONO/closeai-servidor" >> "$GITHUB_ENV"
           echo "VERSAO=$(git rev-parse --short=8 HEAD)" >> "$GITHUB_ENV"
       - name: Compilar (estágio de produção do Dockerfile)
         run: |
